@@ -1,0 +1,120 @@
+body {
+	height: 100vh;
+	background-image: url(../images/background-3.jpg);
+}
+
+.wrapper {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+header {
+	margin: 0 auto;
+	padding: 15px;
+	padding-bottom: 5px;
+	text-align: center;
+	background-color: #453889;
+	height: 80px;
+	border: 2px solid white;
+	border-radius: 50px;
+}
+
+h1 {
+	vertical-align: center;
+	font-family: 'Monoton', cursive;
+	font-size: 4.5em;
+	color: white;
+	text-shadow: -2px 0 purple, 0 2px purple, 2px 0 purple, 
+	0 -2px purple;
+}
+
+#instructions, #crystals, #scores, #results {
+	padding: 15px;
+	background-color: #A59FD5;
+	border: 2px solid white;
+	border-radius: 50px;
+}
+
+#instructions {
+	width: 268px;
+	padding-top: 15px;
+	float: left;
+	position: relative;
+	top: 40px;
+	left: 20px;
+}
+
+h2 {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 2.0em;
+	text-shadow: -1px 0 purple, 0 1px purple, 1px 0 purple, 
+	0 -1px purple;
+	color: black;
+	text-align: center;
+}
+
+#instructions p {
+	color: white;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 1em;
+	font-weight: bold;
+	color: black;
+	text-shadow: -0.3px 0 purple, 0 0.3px purple, 0.3px 0 purple, 
+	0 -0.3px purple;
+}
+
+#crystals {
+	width: 568px;
+	float: right;
+	position: relative;
+	top: 186px;
+	left: -40px;
+}
+
+.crystalPics {
+	width: 130px;
+	height: 130px;
+	border-radius: 40px;
+}
+
+#amethyst {
+	border: 2px solid purple;
+	float: left;
+	margin-right: 10px;
+	margin-left: 1px;
+}
+
+#sapphire {
+	border: 2px solid blue;
+	float: left;
+	margin-right: 10px;
+}
+
+#ruby {
+	border: 2px solid red;
+	float: left;
+}
+
+#emerald {
+	border: 2px solid green;
+	float: left;
+	margin-right: 10px;
+}
+
+#scores, #results {
+	margin-top: 16px;
+	width: 360px;
+	float: right;
+}
+
+#results {
+	position: relative;
+	left: -145px;
+	bottom: 310px;
+}
+
+#scores {
+	position: relative;
+	left: -145px;
+	top: 208px;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Crystal Collector</title>
+	<link rel="stylesheet" type="text/css" href="assets/CSS/reset.css">
+	<link href="https://fonts.googleapis.com/css?family=Monoton|Quicksand" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/CSS/style.css">
+</head>
+<body>
+	<!-- wrapper for content -->
+	<div class="wrapper">
+		
+		<br>
+
+		<header>
+			<h1>Crystal Collector</h1>
+		</header>
+
+		<br>
+		
+		<!-- wrapping instructions in a section -->
+		<section id="instructions">
+			<h2>Instructions</h2>
+			<br>
+			<p>You will be given a random target number at the start of the game.</p>
+			<br>
+			<p>Four crystals appear on the right. If you click on a crystal, your total score increases by the amount of points assigned to that crystal.</p>
+			<br>
+			<p>You win the game by matching your total score to the target number. If you exceed the target number, you lose.</p>
+			<br>
+			<p>The value of each crystal will remain hidden. Figure out the value of each crystal by clicking and monitoring your score.</p>
+			<br>
+			<p>Each time the game restarts, the target number and crystal values will be randomized.</p>
+			<br>
+			<h2>Good luck!</h2>
+		<!-- closing instructions section -->
+		</section>
+		
+		<!-- crystal pics section -->
+		<section id="crystals">
+			<img class="crystalPics" id="amethyst" src="assets/images/amethyst.jpg" alt="amethyst picture">
+			<img class="crystalPics" id="emerald" src="assets/images/emerald.jpg" alt="emerald picture">
+			<img class="crystalPics" id="sapphire" src="assets/images/sapphire.jpg" alt="sapphire picture">
+			<img class="crystalPics" id="ruby" src="assets/images/ruby.jpg" alt="ruby picture">
+		<!-- closing crystals section -->
+		</section>
+		
+		<!-- scores section -->
+		<section id="scores">
+			<h2>Target Score: <span id=targetScore></span></h2>
+			<br><br>
+			<h2>Your Score: <span id=yourScore></span></h2>
+		<!-- closing scores section -->
+		</section>
+
+		<!-- scores section -->
+		<section id="results">
+			<h2>Wins: <span id=wins></span></h2>
+			<br><br>
+			<h2>Losses: <span id=losses></span></h2>
+		<!-- closing scores section -->
+		</section>
+
+	<!-- closing wrapper -->
+	</div>	
+	
+</body>
+</html>
