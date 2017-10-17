@@ -16,10 +16,7 @@ $(document).ready(function() {
 			yourScore: $("#yourScore"),
 			playerWins: $("#wins"),
 			playerLosses: $("#losses"),
-			ruby: $("#ruby"),
-			emerald: $("#emerald"),
-			sapphire: $("#sapphire"),
-			amethyst: $("#amethyst"),
+			gemArray: [$("#amethyst"), $("#emerald"), $("#sapphire"), $("#ruby")],
 			result: $("#result"),
 		},
 		// works as a start game and reset game function
@@ -28,25 +25,17 @@ $(document).ready(function() {
 			this.playerPoints = 0;
 			// starting target points randomized between 19 and 120 
 			this.targetPoints = Math.floor(Math.random() * 102) + 19;
-			// filling random values array with 4 random values
+			// loop to fill randomVals array with 4 random values and
+			// giving a data attribute with those random value to the corresponding gem
 			for (var i = 0; i < 4; i++) {
 				this.randomVals[i] = Math.floor(Math.random() * 12) + 1;
+				this.writeDOM.gemArray[i].attr("data-crystalvalue", this.randomVals[i]);
 			}
 			// writing scores, wins, losses, to DOM
 			this.writeDOM.targetScore.text(this.targetPoints);
 			this.writeDOM.yourScore.text(this.playerPoints);
 			this.writeDOM.playerWins.text(this.wins);
 			this.writeDOM.playerLosses.text(this.losses);
-			// assigning each picture a data crystal val attribute = to 
-			// one of the values in index of randomVals
-			this.writeDOM.amethyst.attr("data-crystalvalue", 
-				this.randomVals[0]);
-			this.writeDOM.emerald.attr("data-crystalvalue", 
-				this.randomVals[1]);
-			this.writeDOM.sapphire.attr("data-crystalvalue", 
-				this.randomVals[2]);
-			this.writeDOM.ruby.attr("data-crystalvalue", 
-				this.randomVals[3]);
 			// logging to ensure it works
 			console.log("target: " + this.targetPoints + ", " + "amethyst val: "
 						+ this.randomVals[0] + ", " + "emerald val: " + 
@@ -84,7 +73,7 @@ $(document).ready(function() {
 	// starts the game on load
 	crystalCollector.startGame();
 
-	// button click event
+	// crystal click event
 	$(".crystalPics").on("click", function() {
 		// create a new var equal to data-crystalval attribute of the 
 		// button which was clicked
