@@ -9,10 +9,10 @@ $(document).ready(function() {
 		emeraldValue: "",
 		sapphireValue: "",
 		amethystValue: "",
-		// initializing wins/losses
+		// wins/losses
 		wins: 0,
 		losses: 0,
-		// creating writeDOM variables for ease of typing
+		// creating variables to rep jquery
 		writeDOM: {
 			targetScore: $("#targetScore"),
 			yourScore: $("#yourScore"),
@@ -40,7 +40,8 @@ $(document).ready(function() {
 			this.writeDOM.yourScore.text(this.playerPoints);
 			this.writeDOM.playerWins.text(this.wins);
 			this.writeDOM.playerLosses.text(this.losses);
-			// assigning each picture a data crystal val attribute = to the starting vals of crystals
+			// assigning each picture a data crystal val attribute = to 
+			// the starting vals of crystals
 			this.writeDOM.ruby.attr("data-crystalvalue", 
 				this.rubyValue);
 			this.writeDOM.emerald.attr("data-crystalvalue", 
@@ -50,9 +51,11 @@ $(document).ready(function() {
 			this.writeDOM.amethyst.attr("data-crystalvalue", 
 				this.amethystValue);
 			// logging to ensure it works
-			console.log("target: " + this.targetPoints + ", " + "ruby val: " + this.rubyValue + ", " 
-						+ "emerald val: " + this.emeraldValue + ", " + "sapphire val: " 
-						+ this.sapphireValue + ", " + "amethyst val: " + this.amethystValue);
+			console.log("target: " + this.targetPoints + ", " + "ruby val: "
+						+ this.rubyValue + ", " + "emerald val: " + 
+						this.emeraldValue + ", " + "sapphire val: " + 
+						this.sapphireValue + ", " + "amethyst val: " + 
+						this.amethystValue);
 		},
 		// function for clicking on picture
 		gemClicks: function() {
@@ -63,13 +66,15 @@ $(document).ready(function() {
 		},
 		// win/loss logic
 		endGame: function() {
-			// if player matches comp points, win, add 1 to wins, write they win, restart game
+			// if player matches comp points, win, add 1 to wins, write they 
+			// win, restart game
 			if (this.playerPoints === this.targetPoints) {
 				this.writeDOM.result.text("You win!!");
 				this.wins++;
 				this.writeDOM.playerWins.text(this.wins);
 				this.startGame();
-			  // if player exceeds comp points, lose, add 1 to losses, write loss, restart game	
+			  // if player exceeds comp points, lose, add 1 to losses, write 
+			  // loss, restart game	
 			} else if (parseInt(this.playerPoints) > this.targetPoints) {
 				this.writeDOM.result.text("You lose.");
 				this.losses++;
@@ -84,7 +89,8 @@ $(document).ready(function() {
 
 	// button click event
 	$(".crystalPics").on("click", function() {
-		// create a new var equal to data-crystalval attribute of the button which was clicked
+		// create a new var equal to data-crystalval attribute of the 
+		// button which was clicked
 		var crystalVal = $(this).attr("data-crystalvalue");
 		// make it an integer so that...
 		crystalVal = parseInt(crystalVal);
