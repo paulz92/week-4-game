@@ -5,10 +5,8 @@ $(document).ready(function() {
 		// initializing points/values variables
 		targetPoints: "",
 		playerPoints: "",
-		rubyValue: "",
-		emeraldValue: "",
-		sapphireValue: "",
-		amethystValue: "",
+		// empty random value array
+		randomVals: [],
 		// wins/losses
 		wins: 0,
 		losses: 0,
@@ -30,32 +28,31 @@ $(document).ready(function() {
 			this.playerPoints = 0;
 			// starting target points randomized between 19 and 120 
 			this.targetPoints = Math.floor(Math.random() * 102) + 19;
-			// starting values for each of 4 crystals. random # b/w 1-12
-			this.rubyValue = Math.floor(Math.random() * 12) + 1;
-			this.emeraldValue = Math.floor(Math.random() * 12) + 1;
-			this.sapphireValue = Math.floor(Math.random() * 12) + 1;
-			this.amethystValue = Math.floor(Math.random() * 12) + 1;
+			// filling random values array with 4 random values
+			for (var i = 0; i < 4; i++) {
+				this.randomVals[i] = Math.floor(Math.random() * 12) + 1;
+			}
 			// writing scores, wins, losses, to DOM
 			this.writeDOM.targetScore.text(this.targetPoints);
 			this.writeDOM.yourScore.text(this.playerPoints);
 			this.writeDOM.playerWins.text(this.wins);
 			this.writeDOM.playerLosses.text(this.losses);
 			// assigning each picture a data crystal val attribute = to 
-			// the starting vals of crystals
-			this.writeDOM.ruby.attr("data-crystalvalue", 
-				this.rubyValue);
-			this.writeDOM.emerald.attr("data-crystalvalue", 
-				this.emeraldValue);
-			this.writeDOM.sapphire.attr("data-crystalvalue", 
-				this.sapphireValue);
+			// one of the values in index of randomVals
 			this.writeDOM.amethyst.attr("data-crystalvalue", 
-				this.amethystValue);
+				this.randomVals[0]);
+			this.writeDOM.emerald.attr("data-crystalvalue", 
+				this.randomVals[1]);
+			this.writeDOM.sapphire.attr("data-crystalvalue", 
+				this.randomVals[2]);
+			this.writeDOM.ruby.attr("data-crystalvalue", 
+				this.randomVals[3]);
 			// logging to ensure it works
-			console.log("target: " + this.targetPoints + ", " + "ruby val: "
-						+ this.rubyValue + ", " + "emerald val: " + 
-						this.emeraldValue + ", " + "sapphire val: " + 
-						this.sapphireValue + ", " + "amethyst val: " + 
-						this.amethystValue);
+			console.log("target: " + this.targetPoints + ", " + "amethyst val: "
+						+ this.randomVals[0] + ", " + "emerald val: " + 
+						this.randomVals[1] + ", " + "sapphire val: " + 
+						this.randomVals[2] + ", " + "ruby val: " + 
+						this.randomVals[3]);
 		},
 		// function for clicking on picture
 		gemClicks: function() {
