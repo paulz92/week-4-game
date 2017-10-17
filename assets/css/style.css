@@ -20,7 +20,6 @@ header {
 }
 
 h1 {
-	vertical-align: center;
 	font-family: 'Monoton', cursive;
 	font-size: 4.5em;
 	color: white;
@@ -28,93 +27,95 @@ h1 {
 	0 -2px purple;
 }
 
-#instructions, #crystals, #scores, #results {
-	padding: 15px;
-	background-color: #A59FD5;
-	border: 2px solid white;
-	border-radius: 50px;
-}
-
-#instructions {
-	width: 268px;
-	padding-top: 15px;
-	float: left;
-	position: relative;
-	top: 40px;
-	left: 20px;
-}
-
-h2 {
+h2, h3, #instructions p {
 	font-family: 'Quicksand', sans-serif;
-	font-size: 2.0em;
 	text-shadow: -1px 0 purple, 0 1px purple, 1px 0 purple, 
 	0 -1px purple;
 	color: black;
 	text-align: center;
 }
 
+h2 {
+	font-size: 2.0em;
+}
+
+h3 {
+	font-size: 1.5em;
+}
+
 #instructions p {
-	color: white;
-	font-family: 'Quicksand', sans-serif;
 	font-size: 1em;
 	font-weight: bold;
-	color: black;
 	text-shadow: -0.3px 0 purple, 0 0.3px purple, 0.3px 0 purple, 
 	0 -0.3px purple;
+	text-align: left;
+}
+
+#instructions, #crystals, #scores, #results, #note {
+	padding: 15px;
+	background-color: #A59FD5;
+	border: 2px solid white;
+	border-radius: 50px;
+	position: relative;
+	float: right;
+}
+
+#instructions {
+	width: 268px;
+	float: left;
+	top: 20px;
+	left: 25px;
+}
+
+#note, #crystals {
+	width: 568px;
+	left: -30px;
+	top: 30px;
 }
 
 #crystals {
-	width: 568px;
-	float: right;
-	position: relative;
-	top: 186px;
-	left: -40px;
+	top: 68px;
 }
 
 .crystalPics {
 	width: 130px;
 	height: 130px;
 	border-radius: 40px;
+	float: left;
+	margin-right: 10px;
 }
 
 #amethyst {
 	border: 2px solid purple;
-	float: left;
-	margin-right: 10px;
 	margin-left: 1px;
-}
-
-#sapphire {
-	border: 2px solid blue;
-	float: left;
-	margin-right: 10px;
-}
-
-#ruby {
-	border: 2px solid red;
-	float: left;
 }
 
 #emerald {
 	border: 2px solid green;
-	float: left;
-	margin-right: 10px;
 }
 
-#scores, #results {
-	margin-top: 16px;
-	width: 360px;
-	float: right;
+#sapphire {
+	border: 2px solid blue;
 }
 
-#results {
-	position: relative;
-	left: -145px;
-	bottom: 310px;
+#ruby {
+	border: 2px solid red;
+	margin-right: 0px;
 }
 
 #scores {
-	position: relative;
-	left: -145px;
-	top: 208px;
+	width: 320px;
+}
+
+#results {
+	width: 160px;
+	right: -324px;
+	bottom: -105px;
+}
+
+#scores {
+	padding-top: 19px;
+	padding-bottom: 19px;
+	left: -278px;
+	top: 107px;
 }
