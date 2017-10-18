@@ -2,7 +2,7 @@
 $(document).ready(function() {
 	// creating game as object
 	var crystalCollector = {
-		// initializing points/values variables
+		// points/values variables
 		targetPoints: "",
 		playerPoints: "",
 		// empty random value array
@@ -61,7 +61,7 @@ $(document).ready(function() {
 				this.startGame();
 			  // if player exceeds comp points, lose, add 1 to losses, write 
 			  // loss, restart game	
-			} else if (parseInt(this.playerPoints) > this.targetPoints) {
+			} else if (this.playerPoints > this.targetPoints) {
 				this.writeDOM.result.text("You lose.");
 				this.losses++;
 				this.writeDOM.playerLosses.text(this.Losses);

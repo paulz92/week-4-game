@@ -102,10 +102,6 @@ h3 {
 	margin-right: 0px; /* centering all 4 pics */
 }
 
-#scores {
-	width: 320px;
-}
-
 #results {
 	width: 160px;
 	right: -324px;
@@ -113,8 +109,146 @@ h3 {
 }
 
 #scores {
+	width: 320px;
 	padding-top: 19px; /*centering text vertically/matching height of results*/
 	padding-bottom: 19px;
 	left: -278px;
 	top: 107px;
+}
+
+@media screen and (max-width: 1020px) {
+	.wrapper {
+		width: 750px;
+	}
+
+	#instructions {
+		width: 220px;
+		left: 0px;
+	}
+
+	#note, #crystals {
+		width: 450px;
+		left: 0px;
+		top: 50px;
+	}
+
+	#crystals {
+		top: 88px;
+	}
+
+	#scores {
+		width: 260px;
+		left: -189px;
+		top: 128px;
+	}
+
+	#results {
+		width: 120px;
+		right: -295px;
+		bottom: -126px;
+	}
+
+	header {
+		padding-bottom: 0px;
+		height: 70px;
+	}
+
+	h1 {
+		font-size: 3.5em;
+	}
+
+	h2 {
+		font-size: 1.7em;
+	}
+
+	h3 {
+		font-size: 1.3em;
+	}
+
+	#instructions p {
+		font-size: 0.9em;
+	}
+
+	.crystalPics {
+		height: 100px;
+		width: 100px;
+	}
+
+@media screen and (max-width: 768px) {
+	.wrapper {
+		width: 600px;
+	}
+
+	#instructions {
+		width: 600px;
+		left: 0px;
+		top: 10px;
+		float: none;
+	}
+
+	#note, #crystals {
+		width: 360px;
+		left: 0px;
+		top: 35px;
+		float: none;
+	}
+
+	#note {
+		height: 25px;
+		padding-top: 25px;
+	}
+
+	#crystals {
+		height: 88px;
+		top: 50px;
+		border-radius: 45px;
+		overflow: auto;
+	}
+
+	#scores {
+		width: 180px;
+		left: 420px;
+		top: -153.5px;
+		float: none;
+	}
+
+	#scores h2 {
+		font-size: 1.05em;
+	}
+
+	#results {
+		width: 180px;
+		right: -420px;
+		top: -141px;
+		float: none;
+	}
+
+	header {
+		padding-bottom: 0px;
+		height: 70px;
+		width: 600px;
+	}
+
+	h1 {
+		font-size: 2.9em;
+	}
+
+	h2 {
+		font-size: 1.2em;
+	}
+
+	h3 {
+		font-size: 1.05em;
+	}
+
+	#instructions p {
+		font-size: 0.8em;
+		text-align: center;
+	}
+
+	.crystalPics {
+		height: 78px;
+		width: 78px;
+		border-radius: 20px;
+	}
 }
