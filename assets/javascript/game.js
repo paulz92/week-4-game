@@ -36,7 +36,7 @@ $(document).ready(function() {
 			this.writeDOM.yourScore.text(this.playerPoints);
 			this.writeDOM.playerWins.text(this.wins);
 			this.writeDOM.playerLosses.text(this.losses);
-			// logging to ensure it works
+			// logging to ensure functionality
 			console.log("target: " + this.targetPoints + ", " + "amethyst val: "
 						+ this.randomVals[0] + ", " + "emerald val: " + 
 						this.randomVals[1] + ", " + "sapphire val: " + 
@@ -47,7 +47,7 @@ $(document).ready(function() {
 		gemClicks: function() {
 			// writing score to DOM for each click. see below on click event
 			this.writeDOM.yourScore.text(this.playerPoints);
-			// logging to ensure it works
+			// logging to ensure functionality
 			console.log("player points: " + crystalCollector.playerPoints);
 		},
 		// win/loss logic
